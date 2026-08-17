@@ -14,8 +14,9 @@ __pycache__/
 # so the raw files themselves do not belong in version control.
 data/
 
-# Personal planning notes - kept locally, never published
+# Personal planning and study notes - kept locally, never published
 PROJE-A-Kestirimci-Bakim-Roadmap.md
+ml-learn/
 
 # OS / editor noise
 .DS_Store
