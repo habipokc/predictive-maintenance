@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Data is fetched reproducibly from the UCI repository by src/data.py,
+# so the raw files themselves do not belong in version control.
+data/
+
+# Personal planning notes - kept locally, never published
+PROJE-A-Kestirimci-Bakim-Roadmap.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
