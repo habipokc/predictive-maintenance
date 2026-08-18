@@ -108,12 +108,25 @@ diagnosis, written after the breakdown. On the shop floor they are empty while
 the part is still being cut. The 0.97 is arithmetically correct and
 operationally meaningless.
 
-Splitting by row order instead of at random costs another 9 points of recall,
-and reveals something a random split hides entirely: the last 20% of the
-production run contains 39 failures where the first 80% contains 300 — a
-failure rate of 1.95% against 3.75%. The process drifted. A shuffled split
-averages that drift away and reports a model evaluated on a period that, in
-the real timeline, no longer exists.
+Splitting by row order instead of at random costs another 9 points of recall —
+but that particular 9 points is not a finding, and saying so matters more than
+quoting it. The ordered test set holds 39 failures, so one failure is worth
+2.56 points of recall, and the Wilson 95% intervals of the two estimates
+([0.199, 0.411] against [0.108, 0.355]) overlap across most of their range.
+The drop is inside the noise.
+
+What the ordered split does establish, on counts large enough to trust, is
+something the random split hides entirely: the last 20% of the production run
+contains 39 failures where the first 80% contains 300 — a failure rate of
+1.95% against 3.75%. The process drifted. A shuffled split averages that drift
+away and reports a model evaluated on a period that, in the real timeline, no
+longer exists.
+
+The distinction is the point. A difference that may be real but is
+unmeasurable at this sample size gets reported as unmeasurable; a difference
+counted on 339 events gets reported as fact. Experiment A needs no such
+caveat — 66 caught against 20 on the identical test set is beyond any
+interval's reach.
 
 The number this project reports is therefore the pessimistic one, on purpose.
 A predictive-maintenance model is bought on the promise of a specific number
